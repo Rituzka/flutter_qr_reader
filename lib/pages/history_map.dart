@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 class HistoryMaps extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return const Center(
+      child: Text('Historico de Mapas Page'),
+    );
   }
 }

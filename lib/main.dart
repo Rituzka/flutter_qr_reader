@@ -5,6 +5,8 @@ import 'package:qr_reader/pages/map_page.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+  final Color primaryColor = Colors.teal;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -13,9 +15,11 @@ class MyApp extends StatelessWidget {
       initialRoute: 'home',
       routes: {'home': (_) => HomePage(), 'map': (_) => MapPage()},
       theme: ThemeData(
-          primaryColor: Colors.amber,
-          floatingActionButtonTheme: const FloatingActionButtonThemeData(
-              backgroundColor: Colors.deepPurple)),
+          appBarTheme: AppBarTheme(
+            color: primaryColor,
+          ),
+          floatingActionButtonTheme:
+              FloatingActionButtonThemeData(backgroundColor: primaryColor)),
     );
   }
 }
